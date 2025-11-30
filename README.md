@@ -1,3 +1,7 @@
+# Project Title
+
+A brief description of what this project does and who it's for
+
 AI Chatbot – Next.js + FastAPI + Gemini
 
 Proyek ini adalah chatbot sederhana yang menggunakan:
