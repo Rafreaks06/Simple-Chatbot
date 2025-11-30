@@ -1,78 +1,89 @@
-# Chatbot 
+# AI Chatbot – Next.js + FastAPI + Gemini
 
-A brief description of what this project does and who it's for
+Sebuah proyek chatbot sederhana yang memadukan **Next.js** untuk frontend, **FastAPI** untuk backend, dan **Google Gemini API** sebagai model AI.  
+Frontend menangani UI dan input chat, sementara backend memproses pesan dan mengembalikan respons dari model Gemini.
 
-AI Chatbot – Next.js + FastAPI + Gemini
+---
 
-Proyek ini adalah chatbot sederhana yang menggunakan:
+## ✨ Features
 
-Next.js (frontend UI)
+- 💬 Chat realtime (non-streaming)  
+- ⚡ UI simpel dan responsif  
+- 🔌 Backend API menggunakan FastAPI  
+- 🔐 Menggunakan **.env** untuk keamanan API key  
+- 🐳 Dapat dijalankan secara lokal atau menggunakan Docker  
 
-FastAPI (backend API)
+---
 
-Google Gemini API (model AI)
+## 📂 Table of Contents
 
-Frontend menangani tampilan dan input chat, sedangkan backend memproses pesan dan mengirimkan jawaban dari model Gemini.
+1. [Installation](#-installation--running)
+2. [Backend Setup (FastAPI)](#-backend-fastapi)
+3. [Frontend Setup (Next.js)](#-frontend-nextjs)
+4. [API Testing](#-api-testing)
+5. [Project Structure](#-project-structure)
+6. [Build & Deploy](#-build--deploy)
+7. [License](#-license)
 
-✨ Fitur
+---
 
-Chat realtime (non-streaming)
+## 📦 Installation & Running
 
-UI simpel dan responsif
-
-API backend terpisah (FastAPI)
-
-Aman menggunakan .env untuk API Key
-
-Bisa dijalankan lokal atau di-docker
-
-📦 Instalasi & Menjalankan
-1. Clone repository
+### 1. Clone Repository
+```sh
 git clone <repo-url>
 cd <folder-project>
-
 🔧 Backend (FastAPI)
-Masuk ke folder backend
+Masuk ke folder backend:
+sh
+Salin kode
 cd backend
-
-Install dependencies
+Install dependencies:
+sh
+Salin kode
 pip install -r requirements.txt
-
-Buat file .env
+Buat file .env:
+ini
+Salin kode
 GEMINI_API_KEY=apikey_anda
-
-Jalankan server FastAPI
+Jalankan server FastAPI:
+sh
+Salin kode
 uvicorn main:app --reload --port 8000
-
-
 Backend berjalan di:
-http://localhost:8000
+
+👉 http://localhost:8000
 
 💻 Frontend (Next.js)
-Masuk ke folder frontend
+Masuk ke folder frontend:
+sh
+Salin kode
 cd ..
 cd chatbot-ui
-
-Install dependencies
+Install dependencies:
+sh
+Salin kode
 npm install
-
-Buat file .env.local
+Buat file .env.local:
+ini
+Salin kode
 NEXT_PUBLIC_API_URL=http://localhost:8000
-
-Jalankan Next.js
+Jalankan Next.js:
+sh
+Salin kode
 npm run dev
-
-
 Frontend berjalan di:
-http://localhost:3000
 
-🧪 Test API
+👉 http://localhost:3000
 
-Swagger UI tersedia di:
+🧪 API Testing
+FastAPI sudah dilengkapi dokumentasi otomatis Swagger:
 
 👉 http://localhost:8000/docs
 
-🛠 Struktur Project
+🛠 Project Structure
+pgsql
+Salin kode
 project-root/
 │
 ├── backend/
@@ -85,25 +96,26 @@ project-root/
     ├── public/
     ├── package.json
     └── .env.local
-
 🚀 Build & Deploy
+Frontend (Next.js)
+Deploy ke Vercel (recommended)
 
-Untuk deployment, kamu dapat:
+Bisa juga ke Netlify / VPS
 
-Deploy Next.js ke Vercel
+Backend (FastAPI)
+Dapat dideploy menggunakan:
 
-Deploy FastAPI via:
+🐳 Docker
 
-Docker
+🚆 Railway
 
-Railway
+🪰 Fly.io
 
-Fly.io
+🖥 EC2 / VPS
 
-EC2 / VPS
+Platform lain sesuai kebutuhan
 
-Dockerfile bisa ditambah jika diperlukan.
+Dockerfile dapat ditambahkan jika diperlukan.
 
-📜 Lisensi
-
+📜 License
 Proyek ini bebas digunakan untuk pembelajaran atau pengembangan.
