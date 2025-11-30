@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+AI Chatbot – Next.js + FastAPI + Gemini
 
-## Getting Started
+Proyek ini adalah chatbot sederhana yang menggunakan:
 
-First, run the development server:
+Next.js (frontend UI)
 
-```bash
+FastAPI (backend API)
+
+Google Gemini API (model AI)
+
+Frontend menangani tampilan dan input chat, sedangkan backend memproses pesan dan mengirimkan jawaban dari model Gemini.
+
+✨ Fitur
+
+Chat realtime (non-streaming)
+
+UI simpel dan responsif
+
+API backend terpisah (FastAPI)
+
+Aman menggunakan .env untuk API Key
+
+Bisa dijalankan lokal atau di-docker
+
+📦 Instalasi & Menjalankan
+1. Clone repository
+git clone <repo-url>
+cd <folder-project>
+
+🔧 Backend (FastAPI)
+Masuk ke folder backend
+cd backend
+
+Install dependencies
+pip install -r requirements.txt
+
+Buat file .env
+GEMINI_API_KEY=apikey_anda
+
+Jalankan server FastAPI
+uvicorn main:app --reload --port 8000
+
+
+Backend berjalan di:
+http://localhost:8000
+
+💻 Frontend (Next.js)
+Masuk ke folder frontend
+cd ..
+cd chatbot-ui
+
+Install dependencies
+npm install
+
+Buat file .env.local
+NEXT_PUBLIC_API_URL=http://localhost:8000
+
+Jalankan Next.js
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Frontend berjalan di:
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🧪 Test API
 
-## Learn More
+Swagger UI tersedia di:
 
-To learn more about Next.js, take a look at the following resources:
+👉 http://localhost:8000/docs
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🛠 Struktur Project
+project-root/
+│
+├── backend/
+│   ├── main.py
+│   ├── requirements.txt
+│   └── .env
+│
+└── chatbot-ui/
+    ├── app/
+    ├── public/
+    ├── package.json
+    └── .env.local
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🚀 Build & Deploy
 
-## Deploy on Vercel
+Untuk deployment, kamu dapat:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy Next.js ke Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy FastAPI via:
+
+Docker
+
+Railway
+
+Fly.io
+
+EC2 / VPS
+
+Dockerfile bisa ditambah jika diperlukan.
+
+📜 Lisensi
+
+Proyek ini bebas digunakan untuk pembelajaran atau pengembangan.
