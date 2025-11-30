@@ -29,7 +29,7 @@ Frontend menangani UI dan input chat, sementara backend memproses pesan dan meng
 
 ## 📦 Installation & Running
 
-### 1. Clone Repository
+### . Clone Repository
 ```sh
 git clone <repo-url>
 cd <folder-project>
