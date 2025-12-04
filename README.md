@@ -1,121 +1,143 @@
-# AI Chatbot – Next.js + FastAPI + Gemini
+# Chatbot UI (Next.js + FastAPI + Docker)
 
-Sebuah proyek chatbot sederhana yang memadukan **Next.js** untuk frontend, **FastAPI** untuk backend, dan **Google Gemini API** sebagai model AI.  
-Frontend menangani UI dan input chat, sementara backend memproses pesan dan mengembalikan respons dari model Gemini.
-
----
-
-## ✨ Features
-
-- 💬 Chat realtime (non-streaming)  
-- ⚡ UI simpel dan responsif  
-- 🔌 Backend API menggunakan FastAPI  
-- 🔐 Menggunakan **.env** untuk keamanan API key  
-- 🐳 Dapat dijalankan secara lokal atau menggunakan Docker  
+A simple chatbot interface built using **Next.js (frontend)** and **FastAPI (backend)** with Gemini API.  
+Both services run using **Docker Compose** for easy deployment.
 
 ---
 
-## 📂 Table of Contents
+## 🚀 Tech Stack
 
- [Installation](#-installation--running)
- [Backend Setup (FastAPI)](#-backend-fastapi)
- [Frontend Setup (Next.js)](#-frontend-nextjs)
- [API Testing](#-api-testing)
- [Project Structure](#-project-structure)
- [Build & Deploy](#-build--deploy)
- [License](#-license)
+### Frontend
+- Next.js 16 (App Router)
+- TypeScript
+- TailwindCSS
+- Fetch API
+
+### Backend
+- FastAPI
+- Google Generative AI (Gemini)
+- Python 3.12
+
+### Deployment
+- Docker
+- Docker Compose
+- Docker Hub (optional)
 
 ---
 
-## 📦 Installation & Running
+## 🛠 Development Setup
 
-### . Clone Repository
-```sh
-git clone <repo-url>
-cd <folder-project>
-🔧 Backend (FastAPI)
-Masuk ke folder backend:
-sh
-Salin kode
-cd backend
+### 1. Frontend (Next.js)
+
 Install dependencies:
-sh
+
+```bash
+npm install
+Run development mode:
+
+bash
 Salin kode
-pip install -r requirements.txt
-Buat file .env:
+npm run dev
+Frontend available at:
+
+arduino
+Salin kode
+http://localhost:3000
+2. Backend (FastAPI)
+Install dependencies:
+
+bash
+Salin kode
+pip install -r backend/requirements.txt
+Run:
+
+bash
+Salin kode
+uvicorn main:app --reload
+Backend available at:
+
+arduino
+Salin kode
+http://localhost:8000
+API docs:
+
+bash
+Salin kode
+http://localhost:8000/docs
+🔧 Environment Variables
+Backend (backend/.env)
 ini
 Salin kode
-GEMINI_API_KEY=apikey_anda
-Jalankan server FastAPI:
-sh
-Salin kode
-uvicorn main:app --reload --port 8000
-Backend berjalan di:
-
-👉 http://localhost:8000
-
-💻 Frontend (Next.js)
-Masuk ke folder frontend:
-sh
-Salin kode
-cd ..
-cd chatbot-ui
-Install dependencies:
-sh
-Salin kode
-npm install
-Buat file .env.local:
+GEMINI_API_KEY=your_api_key
+Frontend (.env.local for local development)
 ini
 Salin kode
 NEXT_PUBLIC_API_URL=http://localhost:8000
-Jalankan Next.js:
-sh
+Docker Compose will automatically override this to:
+
+arduino
 Salin kode
-npm run dev
-Frontend berjalan di:
+http://backend:8000
+🐳 Running With Docker Compose
+Build and start both frontend + backend:
 
-👉 http://localhost:3000
-
-🧪 API Testing
-FastAPI sudah dilengkapi dokumentasi otomatis Swagger:
-
-👉 http://localhost:8000/docs
-
-🛠 Project Structure
-pgsql
+bash
 Salin kode
-project-root/
+docker compose up --build
+Run in background:
+
+bash
+Salin kode
+docker compose up -d --build
+Stop all:
+
+bash
+Salin kode
+docker compose down
+Frontend → http://localhost:3000
+Backend → http://localhost:8000/docs
+
+📦 Building Images Manually
+Backend
+bash
+Salin kode
+docker build -f backend/Dockerfile -t <username>/chatbot-ui-backend:latest backend
+docker push <username>/chatbot-ui-backend:latest
+Frontend
+bash
+Salin kode
+docker build -t <username>/chatbot-ui-frontend:latest .
+docker push <username>/chatbot-ui-frontend:latest
+📁 Project Structure
+bash
+Salin kode
+chatbot-ui/
 │
-├── backend/
+├── app/                     # Next.js frontend pages
+├── backend/                 # FastAPI backend
 │   ├── main.py
 │   ├── requirements.txt
 │   └── .env
 │
-└── chatbot-ui/
-    ├── app/
-    ├── public/
-    ├── package.json
-    └── .env.local
-🚀 Build & Deploy
-Frontend (Next.js)
-Deploy ke Vercel (recommended)
+├── public/
+├── Dockerfile               # Frontend Dockerfile
+├── docker-compose.yml
+└── README.md
+🧪 Features
+Chat UI with auto-scroll
 
-Bisa juga ke Netlify / VPS
+Gemini API integration
 
-Backend (FastAPI)
-Dapat dideploy menggunakan:
+Dockerized frontend & backend
 
-🐳 Docker
+Clean architecture separation
 
-🚆 Railway
+📄 License
+This project is licensed under MIT License.
 
-🪰 Fly.io
+yaml
+Salin kode
 
-🖥 EC2 / VPS
+---
 
-Platform lain sesuai kebutuhan
-
-Dockerfile dapat ditambahkan jika diperlukan.
-
-📜 License
-Proyek ini bebas digunakan untuk pembelajaran atau pengembangan.
+Jika mau saya bisa tambahkan GIF demo atau screenshot section di README.
