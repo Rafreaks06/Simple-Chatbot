@@ -17,13 +17,13 @@ Frontend menangani UI dan input chat, sementara backend memproses pesan dan meng
 
 ## 📂 Table of Contents
 
-1. [Installation](#-installation--running)
-2. [Backend Setup (FastAPI)](#-backend-fastapi)
-3. [Frontend Setup (Next.js)](#-frontend-nextjs)
-4. [API Testing](#-api-testing)
-5. [Project Structure](#-project-structure)
-6. [Build & Deploy](#-build--deploy)
-7. [License](#-license)
+ [Installation](#-installation--running)
+ [Backend Setup (FastAPI)](#-backend-fastapi)
+ [Frontend Setup (Next.js)](#-frontend-nextjs)
+ [API Testing](#-api-testing)
+ [Project Structure](#-project-structure)
+ [Build & Deploy](#-build--deploy)
+ [License](#-license)
 
 ---
 
