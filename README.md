@@ -5,7 +5,7 @@ This is a super simple chatbot interface. It's made with two main parts:
 *   **Next.js (frontend):** This is what you see and interact with in your browser. It's the face of the chatbot.
 *   **FastAPI (backend):** This is the engine that powers the chatbot. It handles the logic and talks to the Gemini API.
 
-We use the Gemini API to make the chatbot smart. To make it easy to get everything running, we use **Docker Compose**. This puts both parts (the frontend and backend) into containers. Think of containers like neat little packages that have everything each part needs to work. This makes it really easy to set up and use the chatbot on your computer!
+We use the Gemini API to make the chatbot smart. To make it easy to get everything running, we use **Docker Compose** (Just My personal opinion, you can use just docker build and not compose). This puts both parts (the frontend and backend) into containers. Think of containers like neat little packages that have everything each part needs to work. This makes it really easy to set up and use the chatbot on your computer!
 
 ---
 
