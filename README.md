@@ -558,7 +558,7 @@ Project ini dilisensikan di bawah MIT License.
 ---
 
 ## 👨‍💻 Pembuat
-**Ronal Yulyanto Suladi**
+**Muhammad Raffi Ar-rosyid**
 - Institusi: Global Institute - Institut Teknologi dan Bisnis Bina Sarana Global
 - Project: Pengantar Cloud Computing-Pagi (Building Docker and Push to Registry)
 - Tahun: 2025-2026
