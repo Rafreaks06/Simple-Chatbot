@@ -1,8 +1,8 @@
 node_modules
 .next
-.git
-.gitignore
-Dockerfile
-npm-debug.log
-README.md
 .env
+.env.local
+.git
+out
+build
+backend/__pycache__
