@@ -567,7 +567,7 @@ Project ini dilisensikan di bawah MIT License.
 ---
 
 ## 🔗 Link
-- GitHub Repository: [URL GitHub Anda]
+- GitHub Repository: https://github.com/Rafreaks06
 - Docker Hub Backend: https://hub.docker.com/r/rafreaks06/chatbot-ui-backend
 - Docker Hub Frontend: https://hub.docker.com/r/rafreaks06/chatbot-ui-frontend
 - Dokumentasi: Lihat laporan project (MuhammadRaffiArrosyid-DockerProject.docx)
