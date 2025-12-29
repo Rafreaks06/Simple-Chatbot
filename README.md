@@ -292,6 +292,7 @@ Alternatifnya, Anda dapat build dan push Docker images secara manual.
 docker build -f backend/Dockerfile -t rafreaks06/chatbot-ui-backend:1.0.1 backend
 
 # Tag sebagai latest
+docker build -f backend/Dockerfile -t rafreaks06/chatbot-ui-backend:latest
 
 ```
 
